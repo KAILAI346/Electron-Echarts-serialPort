@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./echarts.min.js"></script>
+</head>
+<body>
+
+<button type="button" id="btn">读取串口</button>
+<div>串口数据：</div>
+<div id="content" style="border-bottom: 20px;"></div>
+
+<div id="echarts">
+    <button type="button" id="HexBtn">点击展示数据可视化</button>
+    <div id="main" style="width: auto; height: 800px"></div>
+</div>
+
+<!-- 引入render.js模块 -->
+<script src="./renderer.js"></script>
+<!-- 引入echarts，配置饼状图 -->
+<script type="text/javascript">
+
+    var content = document.getElementById('content');
+    var chartDom = document.getElementById('main');
+    var myChart = echarts.init(chartDom);
+
+    var dataList = content.innerText;
+   console.log(option)&& option && myChart.setOption(option);
+</script>
+</body>
+</html>
